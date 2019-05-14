@@ -9,6 +9,7 @@
     <packaging>jar</packaging>
     <name>SAP Cloud Platform REST API Client</name>
     <description>Java HTTP client library for HTTP handling, when building clients for RESTful APIs.</description>
+    <url>https://github.com/SAP/cloud-rest-api-client</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
