@@ -15,6 +15,12 @@ public class Proxy {
     private final String proxyHost;
     private final int proxyPort;
 
+    /**
+     * Public constructor.
+     * @param proxyHost
+     * @param proxyPort
+     * @param proxyScheme
+     */
     public Proxy(final String proxyHost, final int proxyPort, String proxyScheme) {
         this.proxyScheme = proxyScheme;
         this.proxyHost = proxyHost;
@@ -23,6 +29,8 @@ public class Proxy {
 
     /**
      * A constructor using the default proxy scheme.
+     * @param proxyHost
+     * @param proxyPort
      */
     public Proxy(final String proxyHost, final int proxyPort) {
         this(proxyHost, proxyPort, DEFAULT_PROXY_SCHEME);

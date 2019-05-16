@@ -1,6 +1,7 @@
 package com.sap.cloud.rest.api.client.exceptions;
 
 import com.sap.cloud.rest.api.client.RequestBuilder;
+import com.sap.cloud.rest.api.client.model.Request;
 
 /**
  * This exception represents an error, occurred while building a {@link Request}

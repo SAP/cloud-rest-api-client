@@ -53,8 +53,7 @@ public abstract class RestApiClient {
     /**
      * Creates a {@link RestApiClient} instance with the given configuration.
      *
-     * @param config
-     *            the configuration to be used.
+     * @param restApiClientConfig the configuration to be used.
      */
     protected RestApiClient(RestApiClientConfig restApiClientConfig) {
         isNotNull(CONFIG_DISPLAY_NAME, restApiClientConfig);
@@ -68,7 +67,7 @@ public abstract class RestApiClient {
     /**
      * A constructor which allows providing a custom {@link HttpClientProvider}.
      *
-     * @param config
+     * @param restApiClientConfig
      *            the configuration to be used.
      * @param httpClientProvider
      *            the HTTP client provider to be used to create HTTP clients.

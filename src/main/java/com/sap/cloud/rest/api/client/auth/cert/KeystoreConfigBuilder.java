@@ -13,9 +13,9 @@ public class KeystoreConfigBuilder {
 
     /**
      * Attaches a key store to the builder.
-     * 
      * @param keystore
-     */
+     * @return
+     */  
     public KeystoreConfigBuilder keystore(KeyStore keystore) {
         this.keystore = keystore;
         return this;
@@ -23,6 +23,8 @@ public class KeystoreConfigBuilder {
 
     /**
      * Attaches a key store password to the builder.
+     * @param keystorePassword
+     * @return
      */
     public KeystoreConfigBuilder keystorePassword(char[] keystorePassword) {
         this.keystorePassword = keystorePassword;
@@ -31,6 +33,8 @@ public class KeystoreConfigBuilder {
 
     /**
      * Attaches a key store alias to the builder.
+     * @param keyAlias
+     * @return
      */
     public KeystoreConfigBuilder keyAlias(String keyAlias) {
         this.keyAlias = keyAlias;
@@ -40,6 +44,7 @@ public class KeystoreConfigBuilder {
     /**
      * Builds a {@link KeystoreConfig} with the provided key store, password and
      * alias.
+     * @return
      */
     public KeystoreConfig build() {
         return new KeystoreConfig(keystore, keystorePassword, keyAlias);
@@ -47,6 +52,7 @@ public class KeystoreConfigBuilder {
 
     /**
      * Returns an instance of {@link KeystoreConfigBuilder}.
+     * @return
      */
     public static KeystoreConfigBuilder getBuilder() {
         return new KeystoreConfigBuilder();
