@@ -1,11 +1,9 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sap.cloud.client</groupId>
   <artifactId>rest-api-client</artifactId>
-  <version>1.1.2-SNAPSHOT</version>
+  <version>1.1.2</version>
   <packaging>jar</packaging>
   <name>SAP Cloud Platform REST API Client</name>
   <description>Java HTTP client library for HTTP handling, when building clients for RESTful APIs.</description>
@@ -50,7 +48,7 @@
     <connection>scm:git:git://github.com/SAP/cloud-rest-api-client.git</connection>
     <developerConnection>scm:git:git@github.com/SAP/cloud-rest-api-client.git</developerConnection>
     <url>https://github.com/SAP/cloud-rest-api-client</url>
-    <tag>HEAD</tag>
+    <tag>rest-api-client-1.1.2</tag>
   </scm>
 
   <distributionManagement>
