@@ -29,6 +29,7 @@ public class RestApiClientConfig {
     /**
      * Creates a {@link RestApiClientConfig} instance with the given host,
      * {@link NoAuthentication} for authentication and default route planner.
+     * @param host Endpoint host.
      */
     public RestApiClientConfig(String host) {
         this(host, new NoAuthentication());
@@ -37,6 +38,8 @@ public class RestApiClientConfig {
     /**
      * Creates a {@link RestApiClientConfig} instance with the given host and
      * route planner and {@link NoAuthentication} for authentication.
+     * @param host Endpoint host.
+     * @param routePlanner Route planner.
      */
     public RestApiClientConfig(String host, HttpRoutePlanner routePlanner) {
         this(host, new NoAuthentication(), routePlanner);
@@ -45,6 +48,8 @@ public class RestApiClientConfig {
     /**
      * Creates a {@link RestApiClientConfig} instance with the given host and
      * authentication and the default route planner.
+     * @param host Endpoint host.
+     * @param authentication Authentication configuration.
      */
     public RestApiClientConfig(String host, Authentication authentication) {
         this(host, authentication, new DefaultRoutePlanner(DefaultSchemePortResolver.INSTANCE));
@@ -53,6 +58,9 @@ public class RestApiClientConfig {
     /**
      * Creates a {@link RestApiClientConfig} instance with the given host,
      * authentication and route planner.
+     * @param host Endpoint host.
+     * @param authentication Authentication configuration.
+     * @param routePlanner Route planner.
      */
     public RestApiClientConfig(String host, Authentication authentication, HttpRoutePlanner routePlanner) {
         isNotEmptyOrNull(HOST_DISPLAY_NAME, host);
@@ -64,14 +72,23 @@ public class RestApiClientConfig {
         this.routePlanner = routePlanner;
     }
 
+    /**
+     * @return Returns endpoint host.
+     */
     public String getHost() {
         return host;
     }
 
+    /**
+     * @return Returns authentication configuration.
+     */
     public Authentication getAuthentication() {
         return authentication;
     }
 
+    /**
+     * @return Returns configured route planner.
+     */
     public HttpRoutePlanner getRoutePlanner() {
         return routePlanner;
     }

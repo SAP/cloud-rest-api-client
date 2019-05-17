@@ -10,7 +10,7 @@ import com.sap.cloud.rest.api.client.config.RestApiClientConfig;
 public interface Authentication {
 
     /**
-     * Returns the {@link AuthenticationType} value.
+     * @return Returns the {@link AuthenticationType} value.
      */
     AuthenticationType getAuthenticationType();
 }

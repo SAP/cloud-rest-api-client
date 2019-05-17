@@ -164,8 +164,8 @@ public class RequestBuilder<T> {
      * Sets an entity as request body. If the entity is not of type
      * {@link String} it is deserialized using Jackson.
      * 
-     * @param entity
-     *            the request entity
+     * @param entity the request entity
+     * @return request builder
      * @throws RequestBuilderException
      *             if Jackson fails to parse the provided entity
      */
@@ -192,12 +192,11 @@ public class RequestBuilder<T> {
      * buildMultipart() method instead of the normal build() method in order to
      * use multipart entities that are set.
      * 
-     * @param name
-     *            the name of the entity part
-     * @param entity
-     *            an entity representing the part
+     * @param name the name of the entity part
+     * @param entity an entity representing the part
      * @throws RequestBuilderException
      *             if Jackson fails to parse the provided entity
+     * @return RequestBuilder instance.
      */
     public RequestBuilder<T> multipartEntity(String name, T entity) {
         isNotEmptyOrNull(NAME_DISPLAY_NAME, name);
@@ -231,6 +230,7 @@ public class RequestBuilder<T> {
      * 
      * @throws RequestBuilderException
      *             in case of a problem while building the request
+     * @return Request instance.
      */
     public Request<T> build() {
         if (requestBuilder.getUri() == null) {
@@ -253,6 +253,7 @@ public class RequestBuilder<T> {
      * 
      * @throws RequestBuilderException
      *             in case of a problem while building the request
+     * @return Returns multipart request.
      */
     public Request<MultipartEntity<T>> buildMultipart() {
         if (requestBuilder.getUri() == null) {

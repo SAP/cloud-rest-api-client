@@ -22,6 +22,9 @@ import org.apache.http.ssl.SSLContexts;
 import com.sap.cloud.rest.api.client.http.HttpClientCreationException;
 import com.sap.cloud.rest.api.client.http.HttpClientProvider;
 
+/**
+ *  Creates HTTP Client with Mutual TLS authentication. 
+ */
 public class SSLHttpClientProvider extends HttpClientProvider {
 
     private static final String SSL_CONTEXT_ERROR_MESSAGE = "Could not create SSLContext";
@@ -31,10 +34,19 @@ public class SSLHttpClientProvider extends HttpClientProvider {
     private KeystoreConfig keystoreConfig;
     private int timeoutInMillis;
 
+    /**
+     * Constructor using Client Certificate Authentication configuration.
+     * @param authentication Client Certificate Authentication configuration.
+     */
     public SSLHttpClientProvider(ClientCertAuthentication authentication) {
         this(authentication, DEFAULT_TIMEOUT_MILLIS);
     }
 
+    /**
+     * Constructor using Client Certificate Authentication configuration.
+     * @param authentication authentication Client Certificate Authentication configuration.
+     * @param timeoutInMillis Client timeout in milliseconds.
+     */
     public SSLHttpClientProvider(ClientCertAuthentication authentication, int timeoutInMillis) {
         this.keystoreConfig = authentication.getKeystoreConfig();
         this.timeoutInMillis = timeoutInMillis;

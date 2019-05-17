@@ -16,12 +16,19 @@ public class ClientCertAuthentication implements Authentication {
 
     private final KeystoreConfig keystoreConfig;
 
+    /**
+     * Creates ClientCestAuthentication using specified keystore.
+     * @param keystoreConfig Keystore configuration.
+     */
     public ClientCertAuthentication(KeystoreConfig keystoreConfig) {
         isNotNull(KEYSTORE_CONFIG_DISPLAY_NAME, keystoreConfig);
 
         this.keystoreConfig = keystoreConfig;
     }
 
+    /**
+     * @return Returns the {@link KeystoreConfig}
+     */
     public KeystoreConfig getKeystoreConfig() {
         return keystoreConfig;
     }

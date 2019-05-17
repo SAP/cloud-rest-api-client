@@ -15,6 +15,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches an OAuth Server Host to the builder.
+     * @param oAuthServerHost OAuth Server host.
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder oAuthServerHost(final URL oAuthServerHost) {
         final String protocol = oAuthServerHost.getProtocol();
@@ -30,6 +32,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches an OAuth Server Host to the builder.
+     * @param oAuthServerHost OAuth Server host.
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder oAuthServerHost(final String oAuthServerHost) {
         this.oAuthServerHost = oAuthServerHost;
@@ -38,6 +42,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches an OAuth Server API path to the builder.
+     * @param oAuthServerApiPath OAuth Server API path
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder oAuthServerApiPath(final String oAuthServerApiPath) {
         this.oAuthServerApiPath = oAuthServerApiPath;
@@ -46,6 +52,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches a client ID to the builder.
+     * @param clientID client ID
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder clientID(final String clientID) {
         this.clientID = clientID;
@@ -54,6 +62,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches a client secret to the builder.
+     * @param clientSecret a client secret
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder clientSecret(final char[] clientSecret) {
         this.clientSecret = clientSecret;
@@ -62,6 +72,8 @@ public class OAuthServerConfigBuilder {
 
     /**
      * Attaches a custom OAuth header to the builder
+     * @param oAuthHeaderKey custom OAuth header.
+     * @return {@link OAuthServerConfigBuilder} instance.
      */
     public OAuthServerConfigBuilder oAuthHeaderKey(String oAuthHeaderKey) {
         this.oAuthHeaderKey = oAuthHeaderKey;
@@ -73,6 +85,7 @@ public class OAuthServerConfigBuilder {
      * OAuth Server API Path, client ID and client secret and OAuth Header key.
      * If API path or OAuth Header key are not provided, the default ones from
      * {@link OAuthServerConfig} are used.
+     * @return {@link OAuthServerConfig} instance.
      */
     public OAuthServerConfig build() {
         if (oAuthServerApiPath != null && oAuthHeaderKey != null) {
@@ -88,7 +101,7 @@ public class OAuthServerConfigBuilder {
     }
 
     /**
-     * Returns an instance of {@link OAuthServerConfigBuilder}.
+     * @return Returns an instance of {@link OAuthServerConfigBuilder}.
      */
     public static OAuthServerConfigBuilder getBuilder() {
         return new OAuthServerConfigBuilder();

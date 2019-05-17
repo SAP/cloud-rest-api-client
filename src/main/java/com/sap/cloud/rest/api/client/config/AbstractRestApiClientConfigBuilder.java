@@ -29,6 +29,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
      *
      * @param hostUrl
      *            the host that will be used by the client
+     * @return Builder instance.
      */
     public Builder host(URL hostUrl) {
         final String protocol = hostUrl.getProtocol();
@@ -48,6 +49,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
      * 
      * @param host
      *            the host that will be used by the client
+     * @return Builder instance.
      */
     public Builder host(String host) {
         this.host = host;
@@ -56,6 +58,8 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
 
     /**
      * Attaches the provided authentication to the builder.
+     * @param authentication authentication configuration.
+     * @return Builder instance.
      */
     public Builder authentication(Authentication authentication) {
         this.authentication = authentication;
@@ -70,6 +74,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
      *            the username used to create the Authorization header
      * @param password
      *            the password used to create the Authorization header
+     * @return Builder instance.
      */
     public Builder basicAuthentication(String username, char[] password) {
         return authentication(new BasicAuthentication(username, password));
@@ -82,6 +87,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
      * @param oAuthServerConfig
      *            the {@link OAuthServerConfig} needed for creation of
      *            {@link OAuthAuthentication}
+     * @return Builder instance.
      */
     public Builder oAuthAuthentication(OAuthServerConfig oAuthServerConfig) {
         return authentication(new OAuthAuthentication(oAuthServerConfig));
@@ -93,6 +99,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
      * 
      * @param keystoreConfig
      *            the key store configuration used to the set the SSL context
+     * @return Builder instance.
      */
     public Builder clientCertAuthentication(KeystoreConfig keystoreConfig) {
         return authentication(new ClientCertAuthentication(keystoreConfig));
@@ -101,6 +108,7 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
     /**
      * Attaches {@link NoAuthentication} as the authentication type for the
      * configuration to the builder.
+     * @return Builder instance.
      */
     public Builder noAuthentication() {
         return authentication(new NoAuthentication());
@@ -109,6 +117,8 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
     /**
      * Attaches a proxy route planner, with an {@link HttpHost} created using
      * the provided {@link Proxy}, to the builder.
+     * @param proxy Proxy
+     * @return Builder instance.
      */
     public Builder proxy(Proxy proxy) {
         if (proxy != null) {
@@ -122,6 +132,8 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
     /**
      * Attaches a proxy route planner using the provided
      * {@link HttpRoutePlanner}, to the builder.
+     * @param routePlanner Route planner
+     * @return Builder instance.
      */
     public Builder proxy(HttpRoutePlanner routePlanner) {
         this.routePlanner = routePlanner;
@@ -131,11 +143,13 @@ public abstract class AbstractRestApiClientConfigBuilder<Builder extends Abstrac
     /**
      * Override to return an instance of {@link Configuration} with the attached
      * to the builder host, authentication and any subclass properties.
+     * @return Configuration instance.
      */
     public abstract Configuration build();
 
     /**
      * Override to return the instance of the subclass {@link Builder}.
+     * @return Builder instance.
      */
     protected abstract Builder self();
 }

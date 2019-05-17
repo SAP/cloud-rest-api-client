@@ -1,5 +1,8 @@
 package com.sap.cloud.rest.api.client.config;
 
+/**
+ * Builder for {@link RestApiClientConfig} instance.  
+ */
 public class RestApiClientConfigBuilder
         extends AbstractRestApiClientConfigBuilder<RestApiClientConfigBuilder, RestApiClientConfig> {
 
@@ -23,7 +26,7 @@ public class RestApiClientConfigBuilder
     }
 
     /**
-     * Returns an instance of {@link RestApiClientConfigBuilder}
+     * @return Returns an instance of {@link RestApiClientConfigBuilder}
      */
     public static RestApiClientConfigBuilder getBuilder() {
         return new RestApiClientConfigBuilder();

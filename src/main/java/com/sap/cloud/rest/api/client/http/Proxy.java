@@ -17,9 +17,9 @@ public class Proxy {
 
     /**
      * Public constructor.
-     * @param proxyHost
-     * @param proxyPort
-     * @param proxyScheme
+     * @param proxyHost Proxy host.
+     * @param proxyPort Proxy port.
+     * @param proxyScheme Proxy http scheme.
      */
     public Proxy(final String proxyHost, final int proxyPort, String proxyScheme) {
         this.proxyScheme = proxyScheme;
@@ -29,8 +29,8 @@ public class Proxy {
 
     /**
      * A constructor using the default proxy scheme.
-     * @param proxyHost
-     * @param proxyPort
+     * @param proxyHost Proxy host.
+     * @param proxyPort Proxy port.
      */
     public Proxy(final String proxyHost, final int proxyPort) {
         this(proxyHost, proxyPort, DEFAULT_PROXY_SCHEME);

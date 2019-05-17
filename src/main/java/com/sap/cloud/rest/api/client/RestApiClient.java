@@ -279,14 +279,14 @@ public abstract class RestApiClient {
     }
 
     /**
-     * Returns a {@link DefaultResponseHandler}
+     * @return Returns a {@link DefaultResponseHandler}
      */
     protected ResponseHandler<String> getDefaultResponseHandler() {
         return new DefaultResponseHandler();
     }
 
     /**
-     * Returns a {@link DefaultStatusCodeHandler}
+     * @return Returns a {@link DefaultStatusCodeHandler}
      */
     protected StatusCodeHandler getDefaultStatusCodeHandler() {
         return DefaultStatusCodeHandler.create();

@@ -32,6 +32,9 @@ public class OAuthServerConfig {
      * This constructor allows omitting the API path and header key. In this
      * case, <b>/oauth/token</b> is used for API path and <b>Authorization</b>
      * for header key as the default values.
+     * @param oAuthServerHost OAuth server host.
+     * @param clientID Client ID.
+     * @param clientSecret Client secret.
      */
     public OAuthServerConfig(final String oAuthServerHost, final String clientID, final char[] clientSecret) {
         this(oAuthServerHost, DEFAULT_OAUTH_SERVER_API_PATH, clientID, clientSecret);
@@ -40,6 +43,10 @@ public class OAuthServerConfig {
     /**
      * This constructor allows omitting the header key. In this case,
      * <b>Authorization</b> is used for header key as the default value.
+     * @param oAuthServerHost OAuth server host.
+     * @param oAuthServerApiPath API Path
+     * @param clientID Client ID.
+     * @param clientSecret Client secret.
      */
     public OAuthServerConfig(final String oAuthServerHost, final String oAuthServerApiPath, final String clientID,
             final char[] clientSecret) {
@@ -49,12 +56,24 @@ public class OAuthServerConfig {
     /**
      * This constructor allows omitting the API path. In this case,
      * <b>/oauth/token</b> is used the API path as the default value.
+     * @param oAuthServerHost OAuth server host.
+     * @param clientID Client ID.
+     * @param clientSecret Client secret.
+     * @param oAuthHeaderKey OAuth Header key.
      */
     public OAuthServerConfig(final String oAuthServerHost, final String clientID, final char[] clientSecret,
             final String oAuthHeaderKey) {
         this(oAuthServerHost, DEFAULT_OAUTH_SERVER_API_PATH, clientID, clientSecret, oAuthHeaderKey);
     }
 
+    /**
+     * Fill OAuth server configuration constructor.
+     * @param oAuthServerHost OAuth server host.
+     * @param oAuthServerApiPath API Path
+     * @param clientID Client ID.
+     * @param clientSecret Client secret.
+     * @param oAuthHeaderKey OAuth Header key.
+     */
     public OAuthServerConfig(final String oAuthServerHost, final String oAuthServerApiPath, final String clientID,
             final char[] clientSecret, final String oAuthHeaderKey) {
         isNotEmptyOrNull(OAUTH_SERVER_HOST_DISPLAY_NAME, oAuthServerHost);

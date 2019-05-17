@@ -19,7 +19,13 @@ public class KeystoreConfig {
     private final KeyStore keystore;
     private final char[] keystorePassword;
     private final String keyAlias;
-
+    
+    /**
+     * Creates new {@link KeystoreConfig} instance with specific password and alias.
+     * @param keystore Keystore
+     * @param keystorePassword Keystore password
+     * @param keyAlias Keystore alias
+     */
     public KeystoreConfig(KeyStore keystore, char[] keystorePassword, String keyAlias) {
         isNotNull(KEYSTORE_DISPLAY_NAME, keystore);
         isNotEmptyOrNull(KEYSTORE_PASSWORD_DISPLAY_NAME, keystorePassword);
@@ -30,14 +36,23 @@ public class KeystoreConfig {
         this.keyAlias = keyAlias;
     }
 
+    /**
+     * @return Returns the keystore.
+     */
     public KeyStore getKeystore() {
         return keystore;
     }
 
+    /**
+     * @return Returns the keystore password.
+     */
     public char[] getKeystorePassword() {
         return Arrays.copyOf(keystorePassword, keystorePassword.length);
     }
 
+    /**
+     * @return Returns the keystore alias.
+     */
     public String getKeyAlias() {
         return keyAlias;
     }
