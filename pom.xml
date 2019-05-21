@@ -44,6 +44,15 @@
     </license>
   </licenses>
 
+  <developers>
+    <developer>
+      <name>Chavdar Baikov</name>
+      <email>chavdar.baikov@sap.com</email>
+      <organization>SAP SE</organization>
+      <organizationUrl>https://www.sap.com</organizationUrl>
+    </developer>
+  </developers>
+
   <scm>
     <connection>scm:git:git://github.com/SAP/cloud-rest-api-client.git</connection>
     <developerConnection>scm:git:git@github.com/SAP/cloud-rest-api-client.git</developerConnection>
