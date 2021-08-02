@@ -1,5 +1,7 @@
 # REST API Client Library 
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/cloud-rest-api-client)](https://api.reuse.software/info/github.com/SAP/cloud-rest-api-client)
+
 Java HTTP client library for HTTP handling, when building clients for RESTful APIs.
 
 ## Prerequisities and Dependencies
