@@ -314,4 +314,5 @@ __Note:__ The following exceptions are thrown by the interface methods:
 We welcome any exchange and collaboration with individuals and organizations interested in the use, support and extension of the library.
 
 # License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE file](/LICENSE.txt)
+
+Copyright © 2017-2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE file](LICENSES/Apache-2.0.txt).
