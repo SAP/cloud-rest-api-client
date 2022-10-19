@@ -14,7 +14,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.enforcer.version>1.4.1</maven.enforcer.version>
     <http.client.version>4.5.13</http.client.version>
-    <jackson.version>2.9.10.7</jackson.version>
+    <jackson.version>2.13.4.1</jackson.version>
     <apache.commons.lang.version>3.7</apache.commons.lang.version>
     <java.version>1.8</java.version>
     <junit.version>4.13.1</junit.version>
