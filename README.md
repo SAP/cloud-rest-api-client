@@ -1,3 +1,11 @@
+## Deprecation Notice
+
+This public repository is read-only and no longer maintained.
+
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
+
+---
+
 # REST API Client Library 
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP/cloud-rest-api-client)](https://api.reuse.software/info/github.com/SAP/cloud-rest-api-client)
